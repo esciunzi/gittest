@@ -14,7 +14,7 @@ This project is about getting out the monitoring data from the Oracle APEX repos
  
 You want to include APEX monitoring in a single pane of glass and build your checks and alerts instead of accessing APEX Console. 
 
-![img](images/Error.png)
+![img](images/error.png)
 
 The errors widget group provides a view of application errors and application users impact. 
 
