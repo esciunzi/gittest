@@ -14,15 +14,15 @@ This project is about getting out the monitoring data from the Oracle APEX repos
  
 You want to include APEX monitoring in a single pane of glass and build your checks and alerts instead of accessing APEX Console. 
 
-![img](images\Error.png)
+![img](images/error.png)
 
 The errors widget group provides a view of application errors and application users impact. 
 
-![img](images\users_aut.png)
+![img](images/users_aut.png)
 
 The user Authentication widget group shows the application user and the database login. In this case, it provides the success and the failure logon trend. It is recommended to define an alert when the failure exceeds a threshold limit.
 
-![img](images\ApplicationUsage.png)
+![img](images/ApplicationUsage.png)
 
 The application usage widget group provides an overview of the application workload in terms of workspace, application, pages and users.
 
@@ -33,7 +33,7 @@ You can use these sources to build your widget <https://docs.oracle.com/en-us/ia
 
 ## How to use this asset?
 
-![img](images\APEX_monitoring_Architecture.png)
+![img](images/APEX_monitoring_Architecture.png)
 
 For the scope, I used an ATP Database but it can be implemented also on-premises database as well as a OCI Base Database.
 
@@ -70,24 +70,24 @@ allow dynamic-group Mng_Agent to {LOG_ANALYTICS_LOG_GROUP_UPLOAD_LOGS} IN compar
 
 Create an OCI Compute in the same compartment you created in the former step. Once the Compute has been created go to Cloud Agent tab and enable the Management Agent. 
 
-![img](images\Enable_Agent.png)
+![img](images/Enable_Agent.png)
 
 Go on Observability and Management and check in the Agent section the new agent (specify the right compartment, for example, APEX)
 
 Enable the Logging Analytics Plugin in the agent
 
-![img](images\LA_Enable_plugin.png)
+![img](images/LA_Enable_plugin.png)
 
 
 3. Create the connection between Logging Analytics and the APEX DB
 
 Create the Entity DBNAME in Logging Analytics from the OCI Console 
 
-![img](images\LA_AddEntity.png)
+![img](images/LA_AddEntity.png)
 
 Download the ATP Wallet on the Compute VM
 
-![img](images\DatabaseWallet.png)
+![img](images/DatabaseWallet.png)
 
 From the Compute VM create a json file APEXcred.json
 
@@ -128,7 +128,7 @@ Import the Sources definition
 
 From OCI Console -> Observability and Management -> Logging analytics -> Administration Overview -> Import Configuration Content 
 
-![img](images\LA_Import_source.png)
+![img](images/LA_Import_source.png)
 
 Select one by one all the zip files 
 
@@ -136,13 +136,13 @@ For each Source APEX_ created, associate the Source with the ATP Entity
 
 From OCI Console -> Observability and Management -> Logging analytics -> Administration Overview -> Source and for each source click "Unassociated Entity" and select the DBName  
 
-![img](images\LA_Associate_Entity.png)
+![img](images/LA_Associate_Entity.png)
 
 Import the Dashboard 
 
 From OCI Console -> Observability and Management -> Logging analytics -> Dashboard -> Import and select the dashboard JSON 
 
-![img](images\LA_Import_Dashboard.png)
+![img](images/LA_Import_Dashboard.png)
 
 ## Useful Links (Optional)
  
